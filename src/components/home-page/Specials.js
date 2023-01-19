@@ -9,6 +9,7 @@ import SpecialImage3 from "../../images/specials3-spiced-pumpkin-and-chickpea-po
 // A database fetched list of special dishes collection:
 const specialDishes = [
   {
+    id: "d1",
     image: SpecialImage1,
     title: "Cumin roasted cauliflower soup",
     price: 10.99,
@@ -16,6 +17,7 @@ const specialDishes = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus exrerum vel nobis placeat amet architecto ea excepturi ullam repellendus ducimus incidunt voluptatem totam dolores.",
   },
   {
+    id: "d2",
     image: SpecialImage2,
     title: "Pork curry",
     price: 15.4,
@@ -23,6 +25,7 @@ const specialDishes = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus exrerum vel nobis placeat amet architecto ea excepturi ullam repellendus ducimus incidunt voluptatem totam dolores.",
   },
   {
+    id: "d3",
     image: SpecialImage3,
     title: "Spiced pumpkin and chickpea pot",
     price: 12.3,
@@ -42,6 +45,7 @@ export default function Specials() {
         <div className={classes.specialsCollection}>
           {specialDishes.map((dish) => (
             <SpecialCard
+              key={dish.id}
               image={dish.image}
               title={dish.title}
               price={dish.price}

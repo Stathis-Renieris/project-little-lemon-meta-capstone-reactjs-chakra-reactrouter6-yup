@@ -1,0 +1,66 @@
+/* Stars Component */
+
+.starsContainer {
+  display: flex;
+  gap: 0.3rem;
+  color: var(--color-accent-500);
+}
+
+/* Testimonial Component */
+
+.testimonial {
+  max-width: 250px;
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-primary-600);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.userImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userImage img {
+  border-radius: 50%;
+  display: block;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.stars span {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.quotation {
+  margin: 0;
+}
+
+.quotation blockquote {
+  position: relative;
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+.quotation blockquote::before {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  content: "“";
+  font-size: 4rem;
+}
+
+.quotation figcaption {
+  font-style: italic;
+}
