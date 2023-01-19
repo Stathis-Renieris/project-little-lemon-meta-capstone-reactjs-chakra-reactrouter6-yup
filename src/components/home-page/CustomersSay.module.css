@@ -1,0 +1,5 @@
+.customersSaySection {
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+  padding: 3rem 0 5rem 0;
+}

@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&family=Markazi+Text:wght@400;600;700&display=swap");
+
+/** ------------------|| General Styles ||------------------ **/
+
+:root {
+  /* We shrink mobile base font */
+  font-size: 87.5%;
+
+  /* Fonts */
+  --font-basic: "Karla", sans-serif;
+  --font-heading: "Markazi Text", serif;
+
+  /* Font sizes */
+  --font-size-small: 0.833rem;
+  --font-size-paragraph: 1rem;
+  --font-size-big: 1.2rem;
+  --font-size-h6: 1.44rem;
+  --font-size-h5: 1.728rem;
+  --font-size-h4: 2.074rem;
+  --font-size-h3: 2.488rem;
+  --font-size-h2: 2.986rem;
+  --font-size-h1: 3.583rem;
+  --font-size-display2: 4.3rem;
+  --font-size-display1: 5.16rem;
+
+  /* Custom sizes */
+  --font-size-display-title: 4rem;
+  --font-size-display-subtitle: 2.5rem;
+  --font-lead-text: 1.125rem;
+  --font-paragraph: 1rem;
+
+  /* z-indexes */
+  --z-header: 100;
+  --z-menu-overlay: 120;
+  --z-hamburger: 150;
+
+  /* Colors */
+  --color-primary-400: hsl(160, 13%, 38%);
+  --color-primary-500: hsl(160, 13%, 33%);
+  --color-primary-600: hsl(160, 13%, 28%);
+  --color-secondary-500: #ee9972;
+  --color-accent-400: hsl(50, 91%, 62%);
+  --color-accent-500: hsl(50, 91%, 52%);
+  --color-accent-600: hsl(50, 91%, 42%);
+  --color-light: #edefee;
+  --color-dark: #333;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-error: #f44336;
+  --color-success: #8bc34a;
+  --color-warning: #ff9800;
+  --color-info: #03a9f4;
+
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (min-width: 600px) {
+  :root {
+    font-size: 100%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: var(--font-basic);
+  font-size: var(--font-size-paragraph);
+  background-color: var(--color-white);
+  color: var(--color-primary-600);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fluidContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .fluidContainer {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fluidContainer {
+    width: 991px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fluidContainer {
+    width: 1100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .fluidContainer {
+    width: 1200px;
+  }
 }

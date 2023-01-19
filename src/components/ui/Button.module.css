@@ -1,0 +1,25 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 800;
+  border: 2px solid var(--color-accent-500);
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-500);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--color-accent-400);
+  background-color: var(--color-accent-400);
+}
+
+.btn:active {
+  border: 2px solid var(--color-white);
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+  box-shadow: none;
+}

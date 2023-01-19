@@ -1,0 +1,130 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--color-white);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+}
+
+.logo a {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.mainNavigation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-menu-overlay);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(25px);
+  transform: translateX(100%);
+  transition: all 0.3s;
+  font-family: var(--font-heading);
+}
+
+.mainNavigationOpen {
+  transform: translateX(0);
+}
+
+.mainNavigation menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mainNavigation a {
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--color-white);
+  transition: all 0.3s;
+}
+
+.mainNavigation a:link,
+.mainNavigation a:visited {
+  color: var(--color-primary-600);
+}
+
+.mainNavigation a:hover,
+.mainNavigation a:active {
+  color: var(--color-accent-500);
+}
+
+.hamburger {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  z-index: var(--z-hamburger);
+}
+
+.hamburger img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hamburgerIcon {
+}
+
+@media screen and (min-width: 1024px) {
+  .headerContainer {
+    padding: 1.5rem 0;
+  }
+
+  .mainNavigation {
+    position: initial;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: none;
+    transform: none;
+    transition: none;
+    font-family: var(--font-basic);
+  }
+
+  .mainNavigation menu {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .mainNavigation a {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
