@@ -1,11 +1,11 @@
 .specialsSection {
-  padding: 3rem 0 5rem 0;
+  padding: 5rem 0 7rem 0;
 }
 
 .specialsContainer {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .specialsInto {
@@ -26,12 +26,12 @@
 
 @media screen and (min-width: 1024px) {
   .specialsSection {
-    padding-top: 4rem;
+    padding-top: 6rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .specialsSection {
-    padding-top: 6.5rem;
+    padding-top: 7.5rem;
   }
 }

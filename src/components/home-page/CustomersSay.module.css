@@ -1,13 +1,13 @@
 .customersSaySection {
   background-color: var(--color-primary-500);
   color: var(--color-white);
-  padding: 3rem 0 5rem 0;
+  padding: 5rem 0 7rem 0;
 }
 
 .customersSayContainer {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .testimonials {

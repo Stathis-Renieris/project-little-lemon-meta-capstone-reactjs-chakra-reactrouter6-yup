@@ -1,3 +1,134 @@
 .chicagoSection {
-  padding: 3rem 0 5rem 0;
+  padding: 5rem 0 7rem 0;
+}
+
+.chicagoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.aboutContent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.aboutText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.displayTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display-title);
+  color: var(--color-accent-500);
+  font-weight: 600;
+}
+
+.displaySubtitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display-subtitle);
+  margin-top: -2rem;
+}
+
+.text {
+  max-width: 65ch;
+}
+
+.imagesCollage {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.leftImageContainer {
+  width: 60%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftImageContainer > div:first-child {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-lead-text);
+  gap: 0.5rem;
+  padding: 1.5rem 0 1.5rem 25%;
+}
+
+.leftImageContainer span {
+  display: inline-flex;
+  height: 1.3rem;
+}
+
+.leftImageContainer > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 7px;
+  border: 1px solid var(--color-light-600);
+  border-radius: 15px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.leftImageContainer img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.rightImageContainer {
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightImageContainer > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 7px;
+  border: 1px solid var(--color-light-600);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.rightImageContainer img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.rightImageContainer > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0 1.5rem 50%;
+  font-size: var(--font-lead-text);
+}
+
+.rightImageContainer span {
+  display: inline-flex;
+  height: 1.3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .aboutText {
+    width: 45%;
+  }
+
+  .imagesCollage {
+    width: 45%;
+  }
 }

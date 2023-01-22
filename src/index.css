@@ -42,7 +42,8 @@
   --color-accent-400: hsl(50, 91%, 62%);
   --color-accent-500: hsl(50, 91%, 52%);
   --color-accent-600: hsl(50, 91%, 42%);
-  --color-light: #edefee;
+  --color-light: hsl(150, 6%, 93%);
+  --color-light-600: hsl(150, 6%, 83%);
   --color-dark: #333;
   --color-white: #fff;
   --color-black: #000;

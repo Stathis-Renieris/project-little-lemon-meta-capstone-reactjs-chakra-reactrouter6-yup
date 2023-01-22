@@ -1,0 +1,29 @@
+.bookingFormSection {
+  padding: 1rem 0 7rem 0;
+}
+
+.bookingFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.heroText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.displayTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display-title);
+  color: var(--color-accent-500);
+  font-weight: 600;
+}
+
+.displaySubtitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display-subtitle);
+  margin-top: -2rem;
+}
