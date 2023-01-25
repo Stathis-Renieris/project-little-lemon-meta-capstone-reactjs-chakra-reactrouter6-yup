@@ -4,7 +4,7 @@ import BookingForm from "./BookingForm";
 
 import classes from "./BookingPage.module.css";
 
-const timesReducer = (state, action) => {
+export const updateTimes = (state, action) => {
   switch (action.type) {
     case "update-times":
       // TODO: change this action:
@@ -14,7 +14,7 @@ const timesReducer = (state, action) => {
   }
 };
 
-const initializeTimes = () => [
+export const initializeTimes = () => [
   "17:00",
   "18:00",
   "19:00",
@@ -24,13 +24,10 @@ const initializeTimes = () => [
 ];
 
 export default function BookingPage() {
-  const [availableTimes, dispatch] = useReducer(
-    timesReducer,
-    initializeTimes()
-  );
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
   const [occasions, setOccasions] = useState(["Birthday", "Anniversary"]);
 
-  const updateTimes = (e) => {
+  const updateTimesHandler = (e) => {
     console.log("updateTimes called");
     dispatch({ type: "update-times", payload: e.target.value });
   };
@@ -52,7 +49,7 @@ export default function BookingPage() {
             <BookingForm
               availableTimes={availableTimes}
               occasions={occasions}
-              updateTimes={updateTimes}
+              updateTimes={updateTimesHandler}
             />
           </div>
         </div>
