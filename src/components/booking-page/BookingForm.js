@@ -7,7 +7,6 @@ import {
   FormLabel,
   Input,
   Select,
-  // Button,
 } from "@chakra-ui/react";
 
 import useSubmit from "../../hooks/useSubmit";
@@ -17,23 +16,13 @@ import LoadingSpinner from "../ui/LoadingSpinner";
 import Button from "../ui/Button";
 import classes from "./BookingForm.module.css";
 
-export default function BookingForm() {
+export default function BookingForm({
+  availableTimes,
+  occasions,
+  updateTimes,
+}) {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
-  const [occasions, setOccasions] = useState(["Birthday", "Anniversary"]);
-
-  const updateTimes = () => {
-    console.log("Times changed");
-    setAvailableTimes(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
-  };
 
   useEffect(() => {
     if (response) {
@@ -86,7 +75,7 @@ export default function BookingForm() {
           value={formik.values.date}
           onBlur={formik.handleBlur}
           onChange={(e) => {
-            updateTimes();
+            updateTimes(e);
             formik.handleChange(e);
           }}
         />
@@ -144,7 +133,7 @@ export default function BookingForm() {
           id="guests"
           name="guests"
           type="number"
-          placeholder={0}
+          placeholder="A number between 1 and 10"
           min="1"
           max="10"
           step={1}
