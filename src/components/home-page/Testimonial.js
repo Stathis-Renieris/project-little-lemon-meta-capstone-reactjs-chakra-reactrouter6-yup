@@ -19,8 +19,6 @@ function Stars({ numberOfStars }) {
     }
   }
 
-  console.log(decimalPart);
-
   return (
     <div className={classes.starsContainer}>
       {elements.map((x, index) => (

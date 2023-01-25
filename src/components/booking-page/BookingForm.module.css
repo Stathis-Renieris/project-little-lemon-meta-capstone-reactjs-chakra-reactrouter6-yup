@@ -1,0 +1,65 @@
+.form {
+  color: var(--color-primary-500);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(27%) sepia(25%) saturate(309%) hue-rotate(106deg)
+    brightness(97%) contrast(90%);
+}
+
+.errorContent {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+}
+
+.errorContent svg {
+  height: 1.5rem;
+}
+
+.formNumberInput {
+  width: 100%;
+  min-width: 0px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  transition-property: var(--chakra-transition-property-common);
+  transition-duration: var(--chakra-transition-duration-normal);
+  font-size: var(--chakra-fontSizes-md);
+  -webkit-padding-start: var(--chakra-space-4);
+  padding-inline-start: var(--chakra-space-4);
+  -webkit-padding-end: var(--chakra-space-4);
+  padding-inline-end: var(--chakra-space-4);
+  height: var(--chakra-sizes-10);
+  border-radius: var(--chakra-radii-md);
+  border: 1px solid;
+  border-color: inherit;
+  background: inherit;
+  transition: all 0.3s;
+}
+
+.formNumberInput:hover:not(.error):not(:focus-visible) {
+  border-color: var(--chakra-colors-gray-300);
+}
+
+.formNumberInput:focus-visible {
+  z-index: 1;
+  border-color: #4a5e58;
+  box-shadow: 0 0 0 1px #4a5e58;
+}
+
+.error {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 1px #e53e3e;
+}

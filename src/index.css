@@ -36,8 +36,8 @@
 
   /* Colors */
   --color-primary-400: hsl(160, 13%, 38%);
-  --color-primary-500: hsl(160, 13%, 33%);
-  --color-primary-600: hsl(160, 13%, 28%);
+  --color-primary-500: #4a5e58;
+  --color-primary-600: #3e514a;
   --color-secondary-500: #ee9972;
   --color-accent-400: hsl(50, 91%, 62%);
   --color-accent-500: hsl(50, 91%, 52%);
@@ -47,7 +47,9 @@
   --color-dark: #333;
   --color-white: #fff;
   --color-black: #000;
+  --color-error-200: hsl(4, 90%, 94%);
   --color-error: #f44336;
+  --color-success-200: hsl(88, 50%, 94%);
   --color-success: #8bc34a;
   --color-warning: #ff9800;
   --color-info: #03a9f4;

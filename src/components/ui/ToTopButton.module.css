@@ -1,0 +1,20 @@
+.toTopButton {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary-500);
+  color: var(--color-primary-500);
+  background-color: var(--color-white);
+  position: fixed;
+  bottom: 4rem;
+  right: 1.5rem;
+  z-index: 10;
+  box-shadow: 0 4px 7px rgb(0 0 0 / 30%);
+  transition: all 0.3s;
+}
+
+.toTopButton:hover,
+.toTopButton:active {
+  box-shadow: 0 7px 20px rgb(0 0 0 / 20%);
+}

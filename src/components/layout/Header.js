@@ -18,7 +18,10 @@ export default function Header() {
       <div className={`fluidContainer ${classes.headerContainer}`}>
         <div className={classes.logo}>
           <Link to="/">
-            <img src={Logo} alt="Logo" />
+            <img
+              src={Logo}
+              alt="Logo"
+            />
           </Link>
         </div>
         <nav
@@ -47,7 +50,10 @@ export default function Header() {
             </li>
           </menu>
         </nav>
-        <button className={classes.hamburger} onClick={toggleMenu}>
+        <button
+          className={classes.hamburger}
+          onClick={toggleMenu}
+        >
           {isMenuOpen ? (
             <img
               src={OpenedMenuIcon}
