@@ -20,19 +20,21 @@ export default function BookingForm({
   availableTimes,
   occasions,
   updateTimes,
+  isLoading,
+  submitAPI,
 }) {
-  const { isLoading, response, submit } = useSubmit();
-  const { onOpen } = useAlertContext();
+  // const { isLoading, response, submitAPI } = useSubmit();
+  // const { onOpen } = useAlertContext();
 
-  useEffect(() => {
-    if (response) {
-      if (response.type === "success") {
-        formik.resetForm();
-      }
-      console.log(response);
-      onOpen(response.type, response.message);
-    }
-  }, [response]);
+  // useEffect(() => {
+  //   if (response) {
+  //     if (response.type === "success") {
+  //       formik.resetForm();
+  //     }
+  //     console.log(response);
+  //     onOpen(response.type, response.message);
+  //   }
+  // }, [response]);
 
   const formik = useFormik({
     initialValues: {
@@ -43,7 +45,7 @@ export default function BookingForm({
       occasion: "",
     },
     onSubmit: (values) => {
-      submit(values);
+      submitAPI(values);
     },
     validationSchema: Yup.object({
       date: Yup.string().required(),

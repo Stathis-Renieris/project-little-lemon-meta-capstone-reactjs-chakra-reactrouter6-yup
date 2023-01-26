@@ -4,6 +4,8 @@ import {
   AlertDialogContent,
   AlertDialogHeader,
   AlertDialogOverlay,
+  AlertDialogFooter,
+  Button,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
@@ -40,6 +42,15 @@ export default function Alert() {
             {isSuccess ? "All good!" : "Oops!"}
           </AlertDialogHeader>
           <AlertDialogBody>{message}</AlertDialogBody>
+          <AlertDialogFooter>
+            <Button
+              colorScheme="red"
+              onClick={onClose}
+              ml={3}
+            >
+              Close
+            </Button>
+          </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialogOverlay>
     </AlertDialog>

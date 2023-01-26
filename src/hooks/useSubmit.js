@@ -10,7 +10,7 @@ const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const submit = async (data) => {
+  const submitAPI = async (formData) => {
     const random = Math.random();
     setLoading(true);
     try {
@@ -32,7 +32,7 @@ const useSubmit = () => {
     }
   };
 
-  return { isLoading, response, submit };
+  return { isLoading, response, submitAPI };
 };
 
 export default useSubmit;

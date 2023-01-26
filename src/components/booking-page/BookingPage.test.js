@@ -10,16 +10,35 @@ describe("BookingPage", () => {
     expect(headingElement).toBeInTheDocument();
   });
 
-  test(`initializeTimes() returns the following array: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00",]`, () => {
-    expect.assertions(1);
-    const timesTable = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    expect(initializeTimes()).toStrictEqual(timesTable);
+  test(`initializeTimes() returns an array of strings like: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00",]`, () => {
+    expect.assertions(3);
+
+    const result = initializeTimes();
+
+    // Check if initializeTimes() returns an array:
+    expect(Array.isArray(result)).toBe(true);
+    // Check if the array has not a length of 0:
+    expect(result.length).toBeGreaterThan(0);
+    // Check if the array consists only of strings:
+    const isStringArray = (arr) =>
+      arr.every((item) => typeof item === "string");
+    expect(isStringArray(result)).toBe(true);
   });
 
-  // TODO: This test needs to be updated when updateTimes reducer gets modified
-  test(`updateTimes(state, action) returns the same state it receives as an argument`, () => {
-    expect.assertions(1);
+  test(`updateTimes(state, action) returns an array of strings like: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00",] when called with an argument action = {type: "update-times", payload: "2023-01-20"}`, () => {
+    expect.assertions(3);
+
     const state = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    expect(updateTimes(state, { type: "update-times" })).toStrictEqual(state);
+    const action = { type: "update-times", payload: "2023-01-20" };
+    const result = updateTimes(state, action);
+
+    // Check if initializeTimes() returns an array:
+    expect(Array.isArray(result)).toBe(true);
+    // Check if the array has not a length of 0:
+    expect(result.length).toBeGreaterThan(0);
+    // Check if the array consists only of strings:
+    const isStringArray = (arr) =>
+      arr.every((item) => typeof item === "string");
+    expect(isStringArray(result)).toBe(true);
   });
 });
