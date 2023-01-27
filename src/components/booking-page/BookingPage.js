@@ -42,13 +42,11 @@ export default function BookingPage() {
         });
         setIsFormDisplayed(false);
       }
-      console.log(response);
       onOpen(response.type, response.message);
     }
   }, [response]);
 
   const updateTimesHandler = (e) => {
-    console.log("updateTimes called");
     console.log(e.target.value);
     dispatch({ type: "update-times", payload: e.target.value });
   };

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -9,8 +8,6 @@ import {
   Select,
 } from "@chakra-ui/react";
 
-import useSubmit from "../../hooks/useSubmit";
-import { useAlertContext } from "../../context/alert-context";
 import WarningIcon from "../ui/icons/WarningIcon";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import Button from "../ui/Button";
@@ -23,36 +20,27 @@ export default function BookingForm({
   isLoading,
   submitAPI,
 }) {
-  // const { isLoading, response, submitAPI } = useSubmit();
-  // const { onOpen } = useAlertContext();
-
-  // useEffect(() => {
-  //   if (response) {
-  //     if (response.type === "success") {
-  //       formik.resetForm();
-  //     }
-  //     console.log(response);
-  //     onOpen(response.type, response.message);
-  //   }
-  // }, [response]);
-
   const formik = useFormik({
     initialValues: {
       date: "",
       time: "",
       guests: "",
-      test: 0,
+      // test: 0,
       occasion: "",
     },
     onSubmit: (values) => {
+      console.log(values);
       submitAPI(values);
     },
     validationSchema: Yup.object({
-      date: Yup.string().required(),
-      time: Yup.string().required(),
-      guests: Yup.number().min(1).max(10).required(),
-      test: Yup.string().required(),
-      occasion: Yup.string().required(),
+      date: Yup.string().required("You have to pick a date"),
+      time: Yup.string().required("You have to pick a time"),
+      guests: Yup.number()
+        .min(1, "Provide a number between 1 and 10")
+        .max(10, "Provide a number between 1 and 10")
+        .required("You have to provide at least 1 guest"),
+      // test: Yup.string().required(),
+      occasion: Yup.string().required("You have to pick an occasion"),
     }),
   });
 

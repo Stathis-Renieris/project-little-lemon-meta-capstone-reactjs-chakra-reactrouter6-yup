@@ -39,7 +39,9 @@ export default function Alert() {
             fontSize="lg"
             fontWeight="bold"
           >
-            {isSuccess ? "All good!" : "Oops!"}
+            {isSuccess
+              ? "All good!"
+              : "(Emulating server error. Press the form submit until you get success)"}
           </AlertDialogHeader>
           <AlertDialogBody>{message}</AlertDialogBody>
           <AlertDialogFooter>

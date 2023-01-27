@@ -7,11 +7,28 @@ const seededRandom = function (seed) {
   };
 };
 
+// Original:
+// export const fetchAPI = function (date) {
+//   let result = [];
+//   let random = seededRandom(date.getDate());
+
+//   for (let i = 17; i <= 23; i++) {
+//     if (random() < 0.5) {
+//       result.push(i + ":00");
+//     }
+//     if (random() < 0.5) {
+//       result.push(i + ":30");
+//     }
+//   }
+//   return result;
+// };
+
+// We altered the following function to ensure that there is always a "17:00" for unit testing:
 export const fetchAPI = function (date) {
-  let result = [];
+  let result = ["17:00"];
   let random = seededRandom(date.getDate());
 
-  for (let i = 17; i <= 23; i++) {
+  for (let i = 18; i <= 23; i++) {
     if (random() < 0.5) {
       result.push(i + ":00");
     }
