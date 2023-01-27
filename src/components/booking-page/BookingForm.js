@@ -29,7 +29,7 @@ export default function BookingForm({
       occasion: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      // console.log(values);
       submitAPI(values);
     },
     validationSchema: Yup.object({
@@ -89,7 +89,7 @@ export default function BookingForm({
         <Select
           id="time"
           name="time"
-          placeholder="Select an option"
+          placeholder="Select an appropriate time"
           {...formik.getFieldProps("time")}
         >
           {availableTimes.map((item, index) => (

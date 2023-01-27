@@ -47,7 +47,7 @@ export default function BookingPage() {
   }, [response]);
 
   const updateTimesHandler = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     dispatch({ type: "update-times", payload: e.target.value });
   };
 

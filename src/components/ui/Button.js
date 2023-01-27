@@ -30,6 +30,7 @@ export default function Button({
       type={isSubmit && "submit"}
       disabled={disabled}
       style={fullWidth && { width: "100%" }}
+      aria-label="On Click"
     >
       {children}
     </button>
